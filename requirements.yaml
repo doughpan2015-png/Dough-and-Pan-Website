@@ -1,0 +1,15 @@
+packages:
+  "framer-motion": "For page animations, transitions, and scroll effects"
+  "@react-three/fiber": "React bindings for Three.js for the 3D hero section"
+  "@react-three/drei": "Useful helpers for React Three Fiber"
+  "three": "Core 3D library required by React Three Fiber"
+  "lucide-react": "Beautiful icon set for UI elements"
+
+images:
+  - path: "artifacts/king-bakers/public/images/logo-crown.png"
+    description: "Minimalist elegant line art crown logo for a premium bakery in dark warm brown on transparent background"
+    aspect_ratio: "1:1"
+
+notes:
+  - This is a frontend-only application with no backend requirements.
+  - All ordering is handled via WhatsApp deep links.

@@ -16,6 +16,7 @@ function ProductCard({ product }: { product: Product }) {
   const [justAdded, setJustAdded] = useState(false);
 
   const handleAdd = () => {
+    if (!product.isInStock) return;
     addToCart(product);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 1200);
@@ -34,7 +35,9 @@ function ProductCard({ product }: { product: Product }) {
         <img
           src={product.imageUrl || FALLBACK}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${
+            !product.isInStock ? "opacity-60" : ""
+          }`}
           onError={(e) => {
             (e.target as HTMLImageElement).src = FALLBACK;
           }}
@@ -47,8 +50,16 @@ function ProductCard({ product }: { product: Product }) {
         <div className="absolute top-3 left-3 bg-primary/90 text-primary-foreground px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
           {product.category}
         </div>
+        {/* Out of stock overlay */}
+        {!product.isInStock && (
+          <div className="absolute inset-0 bg-background/40 flex items-center justify-center">
+            <span className="bg-foreground/80 text-background text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow">
+              Out of Stock
+            </span>
+          </div>
+        )}
         {/* Cart qty overlay */}
-        {qty > 0 && (
+        {qty > 0 && product.isInStock && (
           <div className="absolute bottom-3 right-3 bg-primary text-primary-foreground px-2.5 py-1 rounded-full text-xs font-bold shadow">
             {qty} in cart
           </div>
@@ -63,7 +74,14 @@ function ProductCard({ product }: { product: Product }) {
           {product.description}
         </p>
 
-        {qty === 0 ? (
+        {!product.isInStock ? (
+          <button
+            disabled
+            className="w-full py-3 rounded-xl font-semibold text-sm bg-muted text-foreground/40 border border-border cursor-not-allowed"
+          >
+            Out of Stock
+          </button>
+        ) : qty === 0 ? (
           <button
             onClick={handleAdd}
             className={`w-full py-3 rounded-xl font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 ${

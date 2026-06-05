@@ -36,7 +36,7 @@ export function Footer() {
                 <Phone className="h-4 w-4 text-accent" /> +91 95609 85539
               </p>
               <p className="flex items-center gap-2 justify-center md:justify-start">
-                <Mail className="h-4 w-4 text-accent" /> doughandpan@gmail.com
+                <Mail className="h-4 w-4 text-accent" />  doughpan2015@gmail.com
               </p>
               <p className="flex items-center gap-2 justify-center md:justify-start">
                 <Clock className="h-4 w-4 text-accent" /> Mon–Sun 8AM–9PM

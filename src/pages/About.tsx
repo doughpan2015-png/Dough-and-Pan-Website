@@ -82,7 +82,7 @@ export default function About() {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=900&q=85"
+                src="/images/about.png"
                 alt="Dough & Pan Bakery Interior"
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -199,8 +199,8 @@ export default function About() {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute -bottom-5 -right-5 z-20 bg-primary text-primary-foreground px-5 py-3 rounded-2xl shadow-xl"
                 >
-                  <div className="font-serif text-lg font-bold leading-tight">Founder</div>
-                  <div className="text-[11px] uppercase tracking-widest opacity-80">Dough & Pan</div>
+                  <div className="font-serif text-lg font-bold leading-tight text-center">Shweta</div>
+                  <div className="text-[11px] uppercase tracking-widest opacity-80 text-center">Founder@Dough & Pan</div>
                 </motion.div>
               </div>
             </motion.div>

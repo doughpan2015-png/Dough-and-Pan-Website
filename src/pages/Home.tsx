@@ -71,6 +71,7 @@ function FeaturedCard({ product }: { product: Product }) {
   const [justAdded, setJustAdded] = useState(false);
 
   const handleAdd = () => {
+    if (!product.isInStock) return;
     addToCart(product);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 1200);
@@ -87,7 +88,7 @@ function FeaturedCard({ product }: { product: Product }) {
         <div className="absolute top-3 left-3 z-10 px-2.5 py-1 bg-background/92 backdrop-blur-sm rounded-full text-[11px] font-semibold text-primary uppercase tracking-wider">
           {product.category}
         </div>
-        {qty > 0 && (
+        {qty > 0 && product.isInStock && (
           <div className="absolute top-3 right-3 z-10 bg-primary text-primary-foreground px-2 py-0.5 rounded-full text-xs font-bold">
             {qty}×
           </div>
@@ -95,9 +96,19 @@ function FeaturedCard({ product }: { product: Product }) {
         <img
           src={product.imageUrl || FALLBACK}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
+            !product.isInStock ? "opacity-60" : ""
+          }`}
           onError={(e) => { (e.target as HTMLImageElement).src = FALLBACK; }}
         />
+        {/* Out of stock overlay */}
+        {!product.isInStock && (
+          <div className="absolute inset-0 bg-background/40 flex items-center justify-center z-10">
+            <span className="bg-foreground/80 text-background text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow">
+              Out of Stock
+            </span>
+          </div>
+        )}
       </div>
       <div className="p-5 flex flex-col flex-1">
         <div className="flex justify-between items-baseline mb-1">
@@ -106,7 +117,14 @@ function FeaturedCard({ product }: { product: Product }) {
         </div>
         <p className="text-xs text-foreground/65 mb-4 line-clamp-2 flex-1">{product.description}</p>
 
-        {qty === 0 ? (
+        {!product.isInStock ? (
+          <button
+            disabled
+            className="w-full py-2.5 rounded-xl font-semibold text-sm bg-muted text-foreground/40 border border-border cursor-not-allowed"
+          >
+            Out of Stock
+          </button>
+        ) : qty === 0 ? (
           <button
             onClick={handleAdd}
             className={`w-full py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 ${
@@ -140,7 +158,7 @@ const testimonials = [
 ];
 const instagramImages = [
   "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80",
-  "https://images.unsplash.com/photo-1555507036-ab1d4075cff3?w=600&q=80",
+  "https://images.unsplash.com/photo-1547398847-19d7560a6257?w=600&q=80",
   "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
   "https://images.unsplash.com/photo-1542826438-bd32f43d626f?w=600&q=80",
   "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80",
@@ -181,7 +199,8 @@ export default function Home() {
 
         <motion.div style={{ y: imgY }} className="absolute inset-0 scale-110">
           <img
-            src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=1800&q=90"
+            // src="https://images.unsplash.com/photo-1583338917451-face2751d8d5?q=90&w=1800"
+            src="/images/hero.png"
             alt="Dough & Pan bakery interior"
             className="w-full h-full object-cover object-center"
             onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1555507036-ab1d4075cff3?w=1800&q=80"; }}

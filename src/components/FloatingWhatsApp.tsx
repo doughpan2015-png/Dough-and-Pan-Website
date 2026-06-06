@@ -3,7 +3,7 @@ import { sendToWhatsApp } from "@/utils/whatsapp";
 export function FloatingWhatsApp() {
   return (
     <button
-      onClick={() => sendToWhatsApp("Hi King Bakers! I have an inquiry.")}
+      onClick={() => sendToWhatsApp("Hi DoughandPan! I have an inquiry.")}
       className="fixed bottom-6 right-6 z-50 group flex items-center gap-3"
       aria-label="Chat on WhatsApp"
     >

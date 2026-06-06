@@ -201,7 +201,7 @@ export function Hero() {
             </button>
             <button
               onClick={() =>
-                sendToWhatsApp("Hello King Bakers! I'd like to place an order from your website.")
+                sendToWhatsApp("Hello DoughandPan! I'd like to place an order from your website.")
               }
               className="px-8 py-4 rounded-full bg-white text-foreground border-2 border-border font-semibold hover:border-primary hover:text-primary transition-all duration-300 flex items-center justify-center gap-2"
             >

@@ -40,7 +40,7 @@ export function Gallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <p className="text-white font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  King Bakers Special
+                  DoughandPan's Special
                 </p>
               </div>
             </motion.div>

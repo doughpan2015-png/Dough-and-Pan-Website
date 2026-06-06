@@ -46,7 +46,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                 transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
               />
             </div>
-            <h1 className="text-3xl font-bold text-primary tracking-tight">King Bakers</h1>
+            <h1 className="text-3xl font-bold text-primary tracking-tight">DoughandPan</h1>
             <p className="text-muted-foreground mt-2 font-medium tracking-widest uppercase text-sm">Meerut</p>
           </motion.div>
         </motion.div>

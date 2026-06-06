@@ -256,9 +256,12 @@ function ViralVideoSection() {
 }
 
 const testimonials = [
-  { name: "Riya Sharma",  text: "The mango cake was absolutely divine! Best bakery in Meerut.", initials: "RS" },
-  { name: "Arjun Mehta",  text: "Sourdough loaf reminds me of European bakeries. Incredible quality.", initials: "AM" },
-  { name: "Priya Kapoor", text: "Ordered a custom wedding cake — it was more beautiful than I imagined.", initials: "PK" },
+  { name: "Karan Arora",  text: "Both cakes were absolutely amazing! The taste, presentation, and design were flawless. I keep coming back because the quality and creativity are always exceptional.", initials: "KA" },
+  { name: "Khushi Jain",  text: "The snacks were delicious, and the cold coffee was a pleasant surprise. Everything we tried was full of flavor and beautifully prepared.", initials: "KJ" },
+  { name: "Ritika Malhotra", text: "The cake was absolutely delicious, and everyone loved the hamper and tumbler as well. Everything was thoughtfully curated and beautifully presented.", initials: "RM" },
+  { name : "Priya Sinha", text: "The cake looked stunning and tasted even better. My daughter loved it, and our guests couldn't stop complimenting it.", initials: "PS" },
+  { name: "Canadian Client", text: "The brownies were incredible! Even our family and friends kept asking for more. Every bite showed the care and quality behind your baking.", initials: "CC" },
+  { name: "Vidvatta Mohan", text: "The cakes were beautifully crafted and exactly what I had hoped for. They made the celebration feel even more special.", initials: "VM" },
 ];
 
 const instagramImages = [

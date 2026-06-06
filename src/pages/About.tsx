@@ -43,13 +43,13 @@ export default function About() {
               Baking with passion,<br />serving with love.
             </h2>
             <p className="text-lg text-foreground/80 leading-relaxed font-light">
-              Dough & Pan was born from a simple belief — that food baked with love tastes different. Founded in the heart of Meerut, we are a passionate team of bakers and pâtissiers dedicated to crafting baked goods that bring warmth, comfort, and celebration to every moment.
+              Dough & Pan began with a simple idea: the best things are made with care. From our bakery in the heart of Meerut, we lovingly craft fresh breads, pastries, and celebration cakes that turn everyday moments into something special. Every loaf, every layer, and every bite is baked to bring a little warmth, comfort, and joy to your table.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed font-light">
-              From our signature sourdough loaves to intricately designed celebration cakes, every creation is made by hand using the finest ingredients. We believe in slow baking, honest flavours, and the joy of sharing something truly homemade.
+              From our sourdough loaves fresh from the oven to beautifully crafted celebration cakes, every creation is just made by hand. We take our time with every bake, quality ingredients, meticulous recipes, and plenty of care and professionalism because for your best moments are just a.
             </p>
             <p className="text-lg text-primary italic font-medium leading-relaxed">
-              "Whether you're celebrating a milestone or simply treating yourself — Dough & Pan is here to make it sweeter."
+              "Whether you're celebrating a achievement or simply it’s your cheat day at diet. Dough & Pan is here to make it sweeter."
             </p>
 
             {/* Stats */}
@@ -124,17 +124,17 @@ export default function About() {
               {
                 icon: <Heart className="w-8 h-8" />,
                 title: "Our Mission",
-                desc: "To create moments of joy through extraordinary baked goods, elevating the everyday coffee break or the grandest celebration."
+                desc: "Our mission is to bring warmth and connection to every table through our baked goods made with care & quality ingredients."
               },
               {
                 icon: <Star className="w-8 h-8" />,
-                title: "Our Promise",
-                desc: "No shortcuts. We use only real butter, pure chocolate, and the freshest local ingredients. If it's not perfect, we don't serve it."
+                title: "Our Vision",
+                desc: "To be the best name for Cakes in Meerut and Beyond & A prosperous environment for our bakers and team."
               },
               {
                 icon: <Users className="w-8 h-8" />,
                 title: "Our Community",
-                desc: "We're proud to be part of Meerut's fabric, creating a warm, welcoming space where neighbours gather and friendships flourish."
+                desc: "To provide freshly baked delights, that stays with our consumers."
               }
             ].map((item, i) => (
               <motion.div
@@ -218,14 +218,14 @@ export default function About() {
               </div>
 
               <p className="text-lg text-foreground/80 leading-relaxed font-light">
-                Dough & Pan was born from one baker's dream — to bring the warmth of homemade baking to every celebration in Meerut. What started as late-night experiments with sourdough starters and fondant has grown into a beloved artisan bakery trusted by hundreds of families.
+                Dough & Pan began with a simple dream: to fill homes across Meerut with the comfort and joy of freshly baked treats. What started in a small kitchen, a visionary founder with countless hours spent perfecting recipes and experimenting with dough, has grown into a bakery that is proud to be a part of your birthdays, celebrations, and everyday moments shared by a family.
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed font-light">
-                With a deep love for craftsmanship and an eye for beauty, our founder built Dough & Pan on the simple belief that every occasion deserves something extraordinary — and that extraordinary things are made one careful, loving step at a time.
+                With a deep love for artisan cakes and an eye for beauty, our founder Mrs. Shweta built Dough & Pan on the simple belief that every occasion deserves something extraordinary, and she can bring forth this vision with her expertise and love that she have for baking. 
               </p>
 
               <blockquote className="border-l-4 border-primary pl-6 italic text-foreground/70 text-xl font-light leading-relaxed">
-                "Every cake we bake carries a piece of our heart. That's the Dough & Pan promise."
+                "A good cake is a responsibility and we take it with seriousness. That's the Dough & Pan promise."
               </blockquote>
 
               {/* Achievements */}
@@ -258,7 +258,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="font-serif text-3xl font-bold text-foreground mb-5">The Bakers Behind The Magic</h2>
           <p className="text-lg text-foreground/60 font-light italic">
-            "Behind every flaky croissant and decadent cake is an early morning, flour-dusted hands, and a baker who genuinely cares."
+            "Behind every croissant or decadent cake is an early morning, flour dusted hands, and a baker who genuinely cares."
           </p>
         </div>
       </section>

@@ -490,20 +490,6 @@ function OrderPreviewCard({
           </div>
         ))}
 
-        {size.price && (
-          <>
-            <div className="border-t border-border pt-2.5 flex items-center justify-between">
-              <span className="font-semibold text-foreground">Estimated Total</span>
-              <span className="font-bold text-primary text-base">
-                ₹{size.price.toLocaleString("en-IN")}
-              </span>
-            </div>
-            <p className="text-[11px] text-foreground/40 flex items-start gap-1">
-              <Info className="w-3 h-3 mt-0.5 flex-shrink-0" />
-              Final price may vary based on design complexity.
-            </p>
-          </>
-        )}
       </div>
     </div>
   );

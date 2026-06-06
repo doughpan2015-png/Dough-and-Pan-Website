@@ -360,15 +360,15 @@ export default function Home() {
               <div>
                 <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Made Just For You</p>
                 <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                  Your Dream Cake,<br />
-                  <span className="text-primary italic">Brought to Life</span>
+                  Cake of your dreams,<br />
+                  <span className="text-primary italic">Just as close as it seems</span>
                 </h2>
               </div>
               <p className="text-lg text-foreground/80 leading-relaxed font-light">
-                Every celebration deserves a centrepiece as special as the moment. Our bakers craft bespoke celebration cakes — from intimate birthdays to grand weddings — using the finest ingredients and unmatched artistry.
+                Cakes are the central part of your special moment. A souvenir for your guests at your birthdays, family gatherings and specially at your weddings. Cakes hold their importance that is some serious responsibility. <br></br> And that is why at Dough & Pan
               </p>
               <ul className="space-y-3">
-                {["Choose from 6+ premium flavours","Custom size from 500gm to 5kg+","Personalised message & design","Delivered fresh to your door"].map((point, i) => (
+                {["You choose from 6+ premium flavours","You can have your cake in the size of your preference from 500gm to 5kg+","You will have the design and your personalized message","And it will be delivered fresh to your door"].map((point, i) => (
                   <motion.li key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex items-center gap-3 text-foreground/80">
                     <div className="w-6 h-6 rounded-full bg-primary/15 flex items-center justify-center flex-shrink-0"><div className="w-2 h-2 rounded-full bg-primary" /></div>
                     {point}
@@ -413,7 +413,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex justify-between items-end mb-12">
             <div>
-              <p className="text-primary font-medium tracking-widest uppercase text-xs mb-2">Best Sellers</p>
+              <p className="inline-flex items-center rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase text-sm tracking-[0.35em] px-3 py-1.5 mb-2">
+                Best Sellers
+              </p>
               <h2 className="font-serif text-4xl sm:text-5xl font-bold text-foreground mb-2">Our Specialties</h2>
               <p className="text-foreground/65 font-light">Handcrafted daily with premium ingredients.</p>
             </div>
@@ -459,12 +461,13 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-foreground mb-4">The Artisan Difference</h2>
-            <p className="text-foreground/70 font-light text-lg">Slow baking, honest flavours, and the joy of sharing something truly homemade.</p>
+            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-foreground mb-4">The Artisan Uniqueness</h2>
+            <p className="text-foreground/70 font-light text-lg">Unhurried baking, honest flavours, and the surety of sharing something truly handmade.
+            </p>
           </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: <Clock className="w-8 h-8" />,       title: "Freshly Baked Daily",   desc: "Every item made fresh every morning before the sun comes up." },
+              { icon: <Clock className="w-8 h-8" />,       title: "Fresh Baked Daily",   desc: "Every item made fresh every morning before the sun comes up." },
               { icon: <Star className="w-8 h-8" />,        title: "Premium Ingredients",   desc: "Sourced from trusted local suppliers for the finest taste." },
               { icon: <Heart className="w-8 h-8" />,       title: "Custom Orders",         desc: "Personalised, beautiful cakes crafted for your special occasions." },
               { icon: <ShieldCheck className="w-8 h-8" />, title: "Hygienic Preparation",  desc: "Strict FSSAI-compliant kitchen standards you can trust." },

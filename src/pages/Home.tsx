@@ -179,7 +179,7 @@ function ViralVideoSection() {
               <span className="text-primary italic">Talking About</span>
             </h2>
             <p className="text-lg text-foreground/70 font-light leading-relaxed">
-              From our kitchen to your feed — watch how we craft our signature cakes with love, precision, and a whole lot of butter.
+              From our kitchen to your feed, It is a sigh of relief for us when our cakes are devoured by people.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <a
@@ -340,7 +340,7 @@ export default function Home() {
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
               className="text-lg sm:text-xl text-white/75 font-light leading-relaxed mb-4 max-w-lg">
-              Artisan breads, handcrafted pastries & bespoke celebration cakes — baked fresh every morning in Meerut.
+              Artisan breads, handcrafted pastries  & celebration cakes are freshly baked every morning.
             </motion.p>
             <motion.div initial={{ scaleX: 0, originX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.8, delay: 0.45 }}
               className="w-16 h-0.5 rounded-full mb-10" style={{ background: "hsl(28 80% 65%)" }} />

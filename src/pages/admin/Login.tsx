@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { useAuth } from "@/context/AuthContext";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function AdminLogin() {
   const { signIn, session } = useAuth();
@@ -9,6 +10,7 @@ export default function AdminLogin() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   if (session) {
     navigate("/admin/products");
@@ -59,6 +61,29 @@ export default function AdminLogin() {
               <label className="block text-sm font-medium text-foreground/80 mb-1.5">
                 Password
               </label>
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="w-full px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(v => !v)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/40 hover:text-foreground/70 transition"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            {/* <div>
+              <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+                Password
+              </label>
               <input
                 type="password"
                 required
@@ -67,7 +92,7 @@ export default function AdminLogin() {
                 placeholder="••••••••"
                 className="w-full px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
               />
-            </div>
+            </div> */}
 
             {error && (
               <p className="text-sm text-red-500 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
